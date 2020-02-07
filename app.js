@@ -151,8 +151,9 @@ var UIController = (function(){
         }
         dec = numSplit[1];
 
-        type ==='exp'? sign = '-' : sign = '+';
-        return sign + ' ' + int +'.'+ dec ; 
+        // type ==='exp'? sign = '-' : sign = '+';
+        // return sign + ' ' + int +'.'+ dec ; 
+        return (type === 'exp' ? '-' : '+') + ' ' + int + '.' + dec;
     }
 
     function nodeListForEach(list , callback){
@@ -217,7 +218,7 @@ var UIController = (function(){
         },
         displayBudget: function(obj){
             var type;
-            obj.budget > 0 ? type==='inc':type==='exp' ; 
+            obj.budget > 0 ? type ='inc' : type ='exp' ; 
 
             $(DOMstrings.budgetLabel).text(formatNumber(obj.budget , type));
             $(DOMstrings.incomeLabel).text(formatNumber(obj.totalInc , 'inc'));
