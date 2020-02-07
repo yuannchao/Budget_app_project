@@ -8,11 +8,6 @@
     box-sizing: border-box;
 }
 
-/* .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-} */
 html {
     font-size: 62.5%;
 }
